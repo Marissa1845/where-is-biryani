@@ -1,0 +1,199 @@
+@font-face {
+    font-family: 'wigglye';
+    src: url('fonts/wigglye-webfont.woff2') format('woff2'),
+         url('fonts/wigglye-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'game_on';
+    src: url('fonts/game_on_personaluseonly-webfont.woff2') format('woff2'),
+         url('fonts/game_on_personaluseonly-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'earth';
+    src: url('fonts/the_last_comic_on_earth-webfont.woff2') format('woff2'),
+         url('fonts/the_last_comic_on_earth-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'bakso';
+    src: url('fonts/baksosapi-webfont.woff2') format('woff2'),
+         url('fonts/baksosapi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sf_slapstick_comicBdOb';
+    src: url('fonts/sf_slapstick_comic_bold_oblique-webfont.woff2') format('woff2'),
+         url('fonts/sf_slapstick_comic_bold_oblique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sf_slapstick_comicbold';
+    src: url('fonts/sf_slapstick_comic_bold-webfont.woff2') format('woff2'),
+         url('fonts/sf_slapstick_comic_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sf_slapstick_comicoblique';
+    src: url('sf_slapstick_comic_oblique-webfont.woff2') format('woff2'),
+         url('sf_slapstick_comic_oblique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sf_slapstick_comic_shadedOb';
+    src: url('sf_slapstick_comic_shaded_oblique-webfont.woff2') format('woff2'),
+         url('sf_slapstick_comic_shaded_oblique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sf_slapstick_comic_shadedRg';
+    src: url('sf_slapstick_comic_shaded-webfont.woff2') format('woff2'),
+         url('sf_slapstick_comic_shaded-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sf_slapstick_comicregular';
+    src: url('sf_slapstick_comic-webfont.woff2') format('woff2'),
+         url('sf_slapstick_comic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    background-image: url("bg.jpg");
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    height: 100vh;
+    padding-left: calc(25vw);
+    z-index: 0;
+  }
+.nav {
+    font-family: 'bakso';
+    padding-right: 1rem;
+    background-color: #14533e;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    height: 7vh;
+    color: antiquewhite;
+    font-size: 150%;
+}
+
+.title {
+    color: antiquewhite;
+    font-family: 'wigglye';
+    text-align: center;
+    font-size: 1500%;
+    z-index: 2;
+
+}
+
+.sass {
+    color:antiquewhite;
+    font-family: 'bakso';
+    line-height: 200%;
+    font-size: 185%;
+    max-width: 40vw;
+    margin-left: 5vw;
+    text-align: center;
+}
+
+.rules {
+    color:antiquewhite;
+    font-family: 'bakso';
+    line-height: 200%;
+    font-size: 175%;
+    max-width: 40vw;
+    margin-left: 5vw;
+    margin-top: 2vw;
+    border: 30px solid transparent;
+    padding: 10px;
+    border-image: url('dahir2.png');
+    text-align: center;
+    border-image-repeat: round;
+    border-image-slice: 0 50;
+}
+
+.starting {
+    color:antiquewhite;
+    font-family: 'bakso';
+    line-height: 200%;
+    font-size: 175%;
+    margin-left: 55vw;
+}
