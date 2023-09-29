@@ -7,9 +7,6 @@
 
 }
 
-
-
-
 @font-face {
     font-family: 'game_on';
     src: url('fonts/game_on_personaluseonly-webfont.woff2') format('woff2'),
@@ -18,9 +15,6 @@
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'earth';
@@ -31,9 +25,6 @@
 
 }
 
-
-
-
 @font-face {
     font-family: 'bakso';
     src: url('fonts/baksosapi-webfont.woff2') format('woff2'),
@@ -42,9 +33,6 @@
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'sf_slapstick_comicBdOb';
@@ -55,11 +43,8 @@
 
 }
 
-
-
-
 @font-face {
-    font-family: 'sf_slapstick_comicbold';
+    font-family: 'slapbold';
     src: url('fonts/sf_slapstick_comic_bold-webfont.woff2') format('woff2'),
          url('fonts/sf_slapstick_comic_bold-webfont.woff') format('woff');
     font-weight: normal;
@@ -67,58 +52,78 @@
 
 }
 
-
-
-
 @font-face {
     font-family: 'sf_slapstick_comicoblique';
-    src: url('sf_slapstick_comic_oblique-webfont.woff2') format('woff2'),
-         url('sf_slapstick_comic_oblique-webfont.woff') format('woff');
+    src: url('fonts/sf_slapstick_comic_oblique-webfont.woff2') format('woff2'),
+         url('fonts/sf_slapstick_comic_oblique-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
-    font-family: 'sf_slapstick_comic_shadedOb';
-    src: url('sf_slapstick_comic_shaded_oblique-webfont.woff2') format('woff2'),
-         url('sf_slapstick_comic_shaded_oblique-webfont.woff') format('woff');
+    font-family: 'slap';
+    src: url('fonts/sf_slapstick_comic_shaded_oblique-webfont.woff2') format('woff2'),
+         url('fonts/sf_slapstick_comic_shaded_oblique-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'sf_slapstick_comic_shadedRg';
-    src: url('sf_slapstick_comic_shaded-webfont.woff2') format('woff2'),
-         url('sf_slapstick_comic_shaded-webfont.woff') format('woff');
+    src: url('fonts/sf_slapstick_comic_shaded-webfont.woff2') format('woff2'),
+         url('fonts/sf_slapstick_comic_shaded-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sf_slapstick_comicregular';
+    src: url('fonts/sf_slapstick_comic-webfont.woff2') format('woff2'),
+         url('fonts/sf_slapstick_comic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
 
-
-
 @font-face {
-    font-family: 'sf_slapstick_comicregular';
-    src: url('sf_slapstick_comic-webfont.woff2') format('woff2'),
-         url('sf_slapstick_comic-webfont.woff') format('woff');
+    font-family: 'souvenir';
+    src: url('fonts2/souvenir_monospaced_itc_w04_rg-webfont.woff2') format('woff2'),
+         url('fonts2/souvenir_monospaced_itc_w04_rg-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
+}
+
+@keyframes squashstretch {
+	0% {
+		-webkit-transform: translateY(-100px);
+		        transform: translateY(-100px); 
+	}
+	
+	10% { 
+		width: 40px;
+		height: 120px;
+	}
+	
+	50% { 
+		width: 120px;
+		height: 40px;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		-webkit-transform: translateY(170px);
+		        transform: translateY(170px);
+	}
 }
 
 html {
     box-sizing: border-box;
     font-size: 16px;
     background-image: url("bg.jpg");
+    scroll-behavior: smooth;
   }
   
   *, *:before, *:after {
@@ -129,6 +134,13 @@ html {
     margin: 0;
     padding: 0;
     font-weight: normal;
+    scrollbar-width: thin;
+    
+  }
+
+  body{
+    font-family: 'bakso';
+    color:  antiquewhite;
   }
   
   ol, ul {
@@ -137,7 +149,6 @@ html {
   
   img {
     height: 100vh;
-    padding-left: calc(25vw);
     z-index: 0;
   }
 .nav {
@@ -154,6 +165,11 @@ html {
     color: antiquewhite;
     font-size: 150%;
 }
+
+#navlb:hover{
+    color: rgb(12, 206, 119);
+}
+
 
 .title {
     color: antiquewhite;
@@ -184,16 +200,456 @@ html {
     margin-top: 2vw;
     border: 30px solid transparent;
     padding: 10px;
-    border-image: url('dahir2.png');
+    border-image: url('dahibord.png');
     text-align: center;
+    border-image-slice: 97 97 88 97;
+    border-image-width: 40px 35px 40px 35px;
+    border-image-outset: 0px 0px 0px 0px;
     border-image-repeat: round;
-    border-image-slice: 0 50;
+
 }
 
 .starting {
     color:antiquewhite;
+    padding-top: 0px;
     font-family: 'bakso';
-    line-height: 200%;
+    line-height: 1%;
     font-size: 175%;
     margin-left: 55vw;
 }
+
+#imgstart {
+    position: absolute;
+    padding: 0;
+    top: 48vh;
+    left: 58vw;
+    width: 24%;
+    height: auto;
+    transition: transform .1s ease-in-out;
+}
+
+#imgstart:hover{
+    transform:scale(1.1);
+}
+
+.move1{
+    animation: squashstretch 1s ease-out;
+}
+
+#takingName{
+    display: none;
+    padding: 20px;
+    justify-content: center;
+}
+
+#name{
+    border: 15px solid #14533e;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    height: 5rem;
+    color: black;
+    font-family: 'bakso';
+    text-align: center;
+    font-size: larger;
+    width: 350px;
+    height: 100px;
+    margin-top: 25vh;
+}
+
+::placeholder{
+    color: black;
+    font-family: 'bakso';
+}
+
+#potato {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    top: 50vh;
+    left: 0;
+    overflow: clip;
+    padding-left: 0px;
+    animation: slideRight 4s infinite ease-in;
+}
+
+@keyframes slideRight {
+    0%{
+        transform: translateX(0vw);
+    }
+    50%{
+        transform: translateX(80vw);
+    }
+    100%{
+        transform: translateX(110vw);
+    }
+}
+#game {
+    display: none;
+    }
+#game2{
+    display: none;
+}
+
+#game3, #game4{
+    display: none;
+}
+
+.birbir {
+    border: 5px antiquewhite solid;
+    margin-left: 25%;
+}
+
+#success {
+    display: none;
+    
+}
+
+#msg{
+    text-align: center;
+    font-family: 'wigglye';
+    margin-top: 3rem;
+    color: rgba(230, 166, 5, 0.768);
+    font-size: 1000%;
+}
+
+#usertime1{
+    text-align: center;
+    font-family: 'slap';
+    color: antiquewhite;
+    font-size: 250%;
+}
+#usertime2{
+    text-align: center;
+    font-family: 'slap';
+    color: antiquewhite;
+    font-size: 250%;
+}
+#usertime3{
+    text-align: center;
+    font-family: 'slap';
+    color: antiquewhite;
+    font-size: 250%;
+}
+#usertime4{
+    text-align: center;
+    font-family: 'slap';
+    color: antiquewhite;
+    font-size: 250%;
+}
+
+#snake {
+    position: absolute;
+    width: 40%;
+    height:auto;
+    left: 30px;
+}
+
+#snark {
+    margin-left: 500px;
+    margin-top: 180px;
+    font-family: 'bakso';
+    color: antiquewhite;
+    font-size: 600%;
+    text-align: center;
+}
+
+#watch {
+    font-size: 130%;
+}
+
+#watch:hover {
+    color: rgb(12, 206, 119);
+}
+
+#comp {
+    display: none;
+    flex-direction: column;
+}
+#times{
+    display: flex;
+    justify-content: space-around;
+}
+
+#comptime {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: 'wigglye';
+    color: rgba(230, 166, 5, 0.768);
+    font-size: 550%;
+}
+
+#comptime1, #comptime2, #comptime3, #comptime4 {
+    text-align: center;
+    font-family: 'bakso';
+    color:  antiquewhite;
+    font-size: 200%;
+}
+
+#found {
+    width: 43%;
+    margin-left: 0;
+    margin-top: 0;
+    height: auto;
+    border: 5px antiquewhite solid;
+}
+
+#compText{
+    align-self: top;
+    justify-self: center;
+    margin-left: 3vw;
+    margin-top: 10vh;
+}
+
+#navlead1{
+    text-align: center;
+    font-family: 'bakso';
+    color:  antiquewhite;
+    font-size: 250%;
+    margin-left: 0vw;
+}
+
+#navlead2{
+    text-align: center;
+    font-family: 'bakso';
+    color:  antiquewhite;
+    font-size: 250%;
+    margin-left: 0vw;
+}
+
+#here1{
+    font-size: 130%;
+}
+
+#here1:hover, #herel2:hover, #herel3:hover, #herel4:hover {
+    color: rgb(12, 206, 119);
+}
+
+#here2{
+    font-size: 130%;
+}
+
+#here2:hover {
+    color: rgb(12, 206, 119);
+}
+
+#lb{
+    display: none;
+    margin-top:8vh;
+}
+
+#lbHead {
+    text-align: center;
+    font-family: 'wigglye';
+    color: rgba(230, 166, 5, 0.768);
+    font-size: 550%;
+}
+
+#table-container {
+    text-align: center;
+    border: 2px antiquewhite solid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'slapbold';
+    color: antiquewhite;
+    width: 50%;
+}
+
+td{
+    padding: 5px;
+    border-bottom: 1px solid #14533e;
+    font-size: 200%;
+    
+}
+
+th {
+    background-color: #14533e;
+    font-size: 300%;
+    padding: 10px;
+    border-bottom: 1px solid #14533e;
+}
+
+a{
+    text-decoration: inherit;
+    color: inherit;
+}
+
+#success1 {
+    display: none;
+}
+#success2 {
+    display: none;
+}
+#success3 {
+    display: none;
+}
+#success4 {
+    display: none;
+}
+
+.levelchange{
+    font-size: 200%;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#herel2, #herel3, #herel4{
+    font-size: 140%;
+}
+
+#fb1 {
+    height: auto;
+    width: 20vw;
+    border: 5px antiquewhite solid;
+}
+
+
+#fb2 {
+    height: auto;
+    width: 20vw;
+    border: 5px antiquewhite solid;
+}
+
+
+#fb3 {
+    height: auto;
+    width: 20vw;
+    border: 5px antiquewhite solid;
+}
+
+#fb4 {
+    height: auto;
+    width: 23.5vw;
+    border: 5px antiquewhite solid;
+}
+
+.sheadings{
+    font-family: 'slapbold';
+    font-size: 300%;
+    margin-bottom: 1rem;
+    padding-top: 7vh;
+}
+
+.sn:hover {
+    color: rgb(12, 206, 119);
+}
+
+.intro {
+    margin-bottom: 3rem;
+}
+
+#hintro {
+    font-family: 'wigglye';
+    color: rgba(230, 166, 5, 0.768);
+    font-size: 550%;
+    padding-top: 5vh;
+}
+
+#pintro{
+    font-family: 'souvenir';
+    font-size: 150%;
+}
+
+
+.sparas {
+    font-family: 'souvenir';
+    font-size: 150%;
+}
+
+#ab {
+    width: 50vw;
+    margin-left: 23vw;
+    margin-top:8vh;
+}
+
+.imgs {
+    margin-top: 20px;
+    margin-left: 10px;
+    border: #14533e solid 0.5rem;
+    width: 45vw;
+    height: auto;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+
+}
+
+.hehe {
+    margin-top: 20px;
+    margin-left: 10px;;
+    width: 40vw;
+    height: auto;
+    margin-top: 1.5rem;
+    margin-left: 4rem;
+}
+
+.fix2 {
+    position: fixed;
+    width: 99vw;
+    top: 0;
+}
+
+.fix1 {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+
+.dance1 {
+    position: absolute;
+    margin-left: 10rem;
+    height: auto;
+    width: 20%;
+    transform: scaleX(-1);
+}
+
+.dance2 {
+    position: absolute;
+    margin-left: 65rem;
+    height: auto;
+    width: 20%;
+}
+
+#sidenav{
+    margin-top: 7vh;
+    position: fixed;
+    width:22vw;
+    font-size: 170%;
+    margin-left: 1rem;
+}
+
+#progressing{
+    display: none;
+    position: relative;
+    top: 40vh;
+    left: 40vw;
+    height: 30px;
+    width: 20%;
+    border: 10px solid rgba(230, 166, 5, 0.768);
+    border-radius: 15px;
+}
+#progressing .color{
+    position: absolute;
+    background-color: antiquewhite;
+    width: 0px;
+    height: 10px;
+    border-radius: 15px;
+    animation: progres 4s infinite linear;    
+}
+@keyframes progres{
+    0%{
+      width: 0%;
+    }
+    25%{
+        width: 50%;
+    }
+    50%{
+        width: 75%;
+    }
+    75%{
+        width: 85%;
+    }
+    100%{
+        width: 100%;
+    }
+};
